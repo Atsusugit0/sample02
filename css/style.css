@@ -1,0 +1,27 @@
+@import url(sanitize.css); /* sanitize.cssを読み込む */
+
+body {
+  background-color: #f0f0f0;
+  padding: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.container {
+  width: 800px;
+  box-shadow: 0 0 10px rgba(0,0,0,3); /* 陰影をつける */
+  margin: 0 auto;
+}
+
+header {
+  background-color: #422814;
+  color: #fff;
+}
+
+/* 子孫結合子：階層構造を指定するセレクタ(htmlをシンプルに保てる) */
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: normal; /* 文字の太さを変更する */
+  text-align: center;　/* 文字の位置を変更する */
+}
