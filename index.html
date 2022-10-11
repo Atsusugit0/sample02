@@ -11,10 +11,33 @@
       <header>
         <h1>COCOA</h1>
       </header>
-      <section class="infomation">
-        <h1>イヤホンジャックの向こう側</h1>
-        
-      </section>
+      <div class="content">
+        <section class="infomation">
+          <h1>イヤホンジャックの向こう側</h1>
+          <p class="type">Album</p>
+          <div class="description">
+            <img src="img/jacket.png" alt="イヤホンジャックの向こう側のジャッケット写真" <!-- imgタグで画像を表示させる。srcでソースのディレクトリを指定、altで画像の説明 -->
+            <p>COCOA ４枚目のアルバムとなる今作。ジャケットデザインに色鉛筆画家の「カタヒラシュンシ」氏を迎え、音楽と絵のコラボを実現させた一枚。</p>
+            <p>HONDA CARS 静岡CM タイアップの「キミのうた」をはじめ、完全書き下ろしの新曲３曲を含む全６曲を収録。<br> <!-- brタグで改行する（単独で使える） -->
+            イヤホンジャックの向こう側に広がる世界を、ぜひご堪能ください。</p>
+          </div>
+        </section>
+        <section class="songs">
+          <h2>収録曲</h2>
+          <ol class="clearfix"> <!-- olタグは順序のあるリストを表示する際に使用する。リストの各項目はliタグを用いる。ex.順序のないリストを表示<ul> -->
+            <li><a href="https://www.youtube.com/watch?v=vjqTkOISzeY" target="_blank">Ｃ＃</a></li> <!-- aタグでリンクをつける。target属性でどのウィンドウに表示するか指定できる -->
+            <li>ワンルームファッションショー</li>
+            <li>ハッピータイム</li>
+            <li>シャンディガフ</li>
+            <li>僕は知らない</li>
+            <li>キミのうた</li>
+          </ol>
+        </section>　
+      </div>
+      <footer>
+        <!-- コピーライトを実体参照を用いて表示する。実体参照：：https://mimi.moe.in/nmp/hms/cer -->
+        &copy; 2020 COCOA
+      </footer>
     </div>
   </body>
 </html>
