@@ -1,4 +1,5 @@
 @import url(sanitize.css); /* sanitize.cssを読み込む */
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');/* Google Fontsを読み込む：：*/
 
 body {
   background-color: #f0f0f0;
@@ -23,5 +24,78 @@ header h1 {
   margin: 0;
   font-size: 24px;
   font-weight: normal; /* 文字の太さを変更する */
-  text-align: center;　/* 文字の位置を変更する */
+  text-align: center; /* 文字の位置を変更する */
+  font-family: 'Sriracha', cursive; /* Google Fontsを用いて書体を変更する*/
+}
+
+.description {
+  clear: left; /* floatを解除する 参考::https://arts-factory.net/float/ */
+}
+
+.description img {
+  float: left;
+  margin: 0 10px 10px 0px;
+}
+
+.infomation h1 {
+  font-size: 18px;
+  margin: 0 10px 10px 0;
+  float: left;
+}
+
+.infomation .type {
+  display: inline; /* pタグをインライン要素に変更 */
+  background-color: #E35A4D;
+  padding: 3px 5px;
+  font-size: 80%;
+  color: #fff;
+}
+
+.content {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.songs {
+  margin: 0 0 20px;
+}
+
+.songs h2 {
+  clear: left;
+  font-size: 100%;
+  font-weight: normal;
+  margin: 0;
+  background-color: #E6E4DD;
+  padding: 5px 10px;
+}
+
+.songs ol {
+  padding: 0;
+  margin: 0;
+  /* リストの先頭に表示するマーカー文字の種類と位置を指定する */
+  list-style: decimal inside;
+  /* list-style-type: decimal;
+  list-style-position: inside; */
+}
+
+.songs li {
+  border-bottom: 1px solid #ccc;
+  width: 50%;
+  float: left;
+  padding: 5px 10px;
+}
+/* clearfixについて：：https://web-camp.io/magazine/archives/27842 */
+.clearfix:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+a {
+  color: #666;
+}
+
+footer {
+  text-align: center;
+  font-size: 80%;
 }
