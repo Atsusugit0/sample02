@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  width: 800px;
+  max-width: 800px; /* 最大幅の設定 */
   box-shadow: 0 0 10px rgba(0,0,0,3); /* 陰影をつける */
   margin: 0 auto;
 }
@@ -33,8 +33,21 @@ header h1 {
 }
 
 .description img {
+  width: 30%;
+  max-width: 100%;
+  height: auto;
   float: left;
   margin: 0 10px 10px 0px;
+  /* cssアニメーションの設定 */
+  transition-property: opacity; /* opacityが適用された時にアニメーションが有効になる */
+  transition-duration: 1s; /* アニメーションの時間 */
+  transition-timing-function: ease; /* アニメーションのエフェクトを設定 */
+  transition-delay: 0s; /* アニメーション開始時間の設定 */
+}
+
+/* 擬似クラスの設定 hover（マウスカーソルが重なった時に適用される） */
+.description img:hover {
+  opacity: .5; /* 不透明度の設定 */
 }
 
 .infomation h1 {
@@ -98,4 +111,31 @@ a {
 footer {
   text-align: center;
   font-size: 80%;
+}
+
+/* メディアクエリを用いてスマホ用のデザインを設定をする */
+@media only screen and (max-width: 600px) /* ブレイクポイントを設定 */ {
+  /* 画像を真ん中に寄せる */
+  .description img {
+    float: none;
+    display: block; /* <img>はデフォルト値は"inline"であるため"block"に変更することでmarginを効かせる */
+    margin: 0 auto;
+  }
+
+  header {
+    padding: 5px;
+  }
+
+  header h1 {
+    font-size: 12px;
+  }
+
+  .infomation h1 {
+    font-size: 14px;
+  }
+
+  .songs li {
+    float: none;
+    width: inherit; /* 親要素のプロパティの値を継承する設定 */
+  }
 }
