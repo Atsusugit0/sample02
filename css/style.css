@@ -1,141 +1,168 @@
-@import url(sanitize.css); /* sanitize.cssを読み込む */
-@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');/* Google Fontsを読み込む：：*/
+@import url(sanitize.css);
+
+/* sanitize.cssを読み込む */
+
+@import url("https://fonts.googleapis.com/css2?family=Sriracha&display=swap");
+
+/* Google Fontsを読み込む：：*/
 
 body {
-  background-color: #f0f0f0;
-  padding: 10px;
-  font-size: 14px;
-  color: #666;
+    background-color: #f0f0f0;
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
 }
 
 .container {
-  max-width: 800px; /* 最大幅の設定 */
-  box-shadow: 0 0 10px rgba(0,0,0,3); /* 陰影をつける */
-  margin: 0 auto;
+    max-width: 800px;
+    /* 最大幅の設定 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 3);
+    /* 陰影をつける */
+    margin: 0 auto;
 }
 
 header {
-  background-color: #422814;
-  color: #fff;
+    background-color: #422814;
+    color: #fff;
 }
 
+
 /* 子孫結合子：階層構造を指定するセレクタ(htmlをシンプルに保てる) */
+
 header h1 {
-  margin: 0;
-  font-size: 24px;
-  font-weight: normal; /* 文字の太さを変更する */
-  text-align: center; /* 文字の位置を変更する */
-  font-family: 'Sriracha', cursive; /* Google Fontsを用いて書体を変更する*/
+    margin: 0;
+    font-size: 24px;
+    font-weight: normal;
+    /* 文字の太さを変更する */
+    text-align: center;
+    /* 文字の位置を変更する */
+    font-family: "Sriracha", cursive;
+    /* Google Fontsを用いて書体を変更する*/
 }
 
 .description {
-  clear: left; /* floatを解除する 参考::https://arts-factory.net/float/ */
+    clear: left;
+    /* floatを解除する 参考::https://arts-factory.net/float/ */
 }
 
 .description img {
-  width: 30%;
-  max-width: 100%;
-  height: auto;
-  float: left;
-  margin: 0 10px 10px 0px;
-  /* cssアニメーションの設定 */
-  transition-property: opacity; /* opacityが適用された時にアニメーションが有効になる */
-  transition-duration: 1s; /* アニメーションの時間 */
-  transition-timing-function: ease; /* アニメーションのエフェクトを設定 */
-  transition-delay: 0s; /* アニメーション開始時間の設定 */
+    width: 30%;
+    max-width: 100%;
+    height: auto;
+    float: left;
+    margin: 0 10px 10px 0;
+    /* cssアニメーションの設定 */
+    transition-property: opacity;
+    /* opacityが適用された時にアニメーションが有効になる */
+    transition-duration: 1s;
+    /* アニメーションの時間 */
+    transition-timing-function: ease;
+    /* アニメーションのエフェクトを設定 */
+    transition-delay: 0s;
+    /* アニメーション開始時間の設定 */
 }
 
+
 /* 擬似クラスの設定 hover（マウスカーソルが重なった時に適用される） */
+
 .description img:hover {
-  opacity: .5; /* 不透明度の設定 */
+    opacity: 0.5;
+    /* 不透明度の設定 */
 }
 
 .infomation h1 {
-  font-size: 18px;
-  margin: 0 10px 10px 0;
-  float: left;
+    font-size: 18px;
+    margin: 0 10px 10px 0;
+    float: left;
 }
 
 .infomation .type {
-  display: inline; /* pタグをインライン要素に変更 */
-  background-color: #E35A4D;
-  padding: 3px 5px;
-  font-size: 80%;
-  color: #fff;
+    display: inline;
+    /* pタグをインライン要素に変更 */
+    background-color: #e35a4d;
+    padding: 3px 5px;
+    font-size: 80%;
+    color: #fff;
 }
 
 .content {
-  background-color: #fff;
-  padding: 20px;
+    background-color: #fff;
+    padding: 20px;
 }
 
 .songs {
-  margin: 0 0 20px;
+    margin: 0 0 20px;
 }
 
 .songs h2 {
-  clear: left;
-  font-size: 100%;
-  font-weight: normal;
-  margin: 0;
-  background-color: #E6E4DD;
-  padding: 5px 10px;
+    clear: left;
+    font-size: 100%;
+    font-weight: normal;
+    margin: 0;
+    background-color: #e6e4dd;
+    padding: 5px 10px;
 }
 
 .songs ol {
-  padding: 0;
-  margin: 0;
-  /* リストの先頭に表示するマーカー文字の種類と位置を指定する */
-  list-style: decimal inside;
-  /* list-style-type: decimal;
+    padding: 0;
+    margin: 0;
+    /* リストの先頭に表示するマーカー文字の種類と位置を指定する */
+    list-style: decimal inside;
+    /* list-style-type: decimal;
   list-style-position: inside; */
 }
 
 .songs li {
-  border-bottom: 1px solid #ccc;
-  width: 50%;
-  float: left;
-  padding: 5px 10px;
+    border-bottom: 1px solid #ccc;
+    width: 50%;
+    float: left;
+    padding: 5px 10px;
 }
+
+
 /* clearfixについて：：https://web-camp.io/magazine/archives/27842 */
+
 .clearfix:after {
-  content: " ";
-  display: table;
-  clear: both;
+    content: " ";
+    display: table;
+    clear: both;
 }
 
 a {
-  color: #666;
+    color: #666;
 }
 
 footer {
-  text-align: center;
-  font-size: 80%;
+    text-align: center;
+    font-size: 80%;
 }
 
+
 /* メディアクエリを用いてスマホ用のデザインを設定をする */
-@media only screen and (max-width: 600px) /* ブレイクポイントを設定 */ {
-  /* 画像を真ん中に寄せる */
-  .description img {
-    float: none;
-    display: block; /* <img>はデフォルト値は"inline"であるため"block"に変更することでmarginを効かせる */
-    margin: 0 auto;
-  }
 
-  header {
-    padding: 5px;
-  }
+@media only screen and (max-width: 600px)
+/* ブレイクポイントを設定 */
 
-  header h1 {
-    font-size: 12px;
-  }
-
-  .infomation h1 {
-    font-size: 14px;
-  }
-
-  .songs li {
-    float: none;
-    width: inherit; /* 親要素のプロパティの値を継承する設定 */
-  }
+{
+    /* 画像を真ん中に寄せる */
+    .description img {
+        float: none;
+        display: block;
+        /* <img>はデフォルト値は"inline"であるため"block"に変更することでmarginを効かせる */
+        margin: 0 auto;
+    }
+    header {
+        padding: 5px;
+    }
+    header h1 {
+        font-size: 12px;
+    }
+    .infomation h1 {
+        font-size: 14px;
+    }
+    .songs li {
+        float: none;
+        width: inherit;
+        /* 親要素のプロパティの値を継承する設定 */
+    }
 }
